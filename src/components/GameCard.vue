@@ -4,7 +4,11 @@
       <figure class="image is-4by3">
         <img
           id="test"
-          src="../assets/league-of-legends-champions-i102252.jpg"
+          :src="
+            'https://static-cdn.jtvnw.net/ttv-boxart/' +
+            gameName +
+            '-1920x1080.jpg'
+          "
           alt=""
         />
       </figure>
@@ -12,7 +16,7 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <p class="title is-4">League of Legends</p>
+          <p class="title is-4">{{ gameName }}</p>
         </div>
       </div>
 
@@ -27,6 +31,7 @@
 <script>
 export default {
   name: "GameCard",
+  props: ["gameName", "imgUrl"],
 };
 </script>
 

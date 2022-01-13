@@ -5,10 +5,10 @@ import App from './App.vue'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 
-const Home = () => import ('./components/Home.vue')
-const About = () => import ('./components/About.vue')
-const Top20 = () => import ('./components/Top20.vue')
-const Signup = () => import ('./components/Signup.vue')
+const Home = () => import('./components/Home.vue')
+const About = () => import('./components/About.vue')
+const Top20 = () => import('./components/Top20.vue')
+const Signup = () => import('./components/Signup.vue')
 
 Vue.config.productionTip = false
 Vue.use(Buefy)
@@ -16,7 +16,8 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/home', component: Home },
-  { path: '/about', component: About },
+  { path: '/', component: Home },
+  { path: '/about/:id/:name', component: About },
   { path: '/top20', component: Top20 },
   { path: '/signup', component: Signup },
 ]
