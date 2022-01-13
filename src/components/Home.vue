@@ -11,7 +11,6 @@
           rounded
           :data="filteredData"
           :loading="isFetching"
-          :open-on-focus="true"
           field="el.name"
           placeholder="e.g. League of Legends"
           icon="magnify"
